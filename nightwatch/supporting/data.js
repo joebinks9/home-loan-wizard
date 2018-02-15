@@ -1,0 +1,132 @@
+module.exports = {
+    //This is a valid test all the way through. QJH-129
+    test1: {
+        loan: 'Refinance',
+        propertyType: 'Single Family Home',
+        purchaseCity: 'Lehi, UT',
+        purchaseReason: 'Rental Property',
+        propertyLocated: 'No',
+        agent: 'No',
+        purchasePrice: '$300,000.00',
+        downPayment: '$25,000.00',
+        creditScore: 'Good',
+        creditHistory: 'Has had bankruptcy',
+        address1: '111 Walnut st.',
+        address2: '',
+        address3: 'Woodland, CA 95695',
+        firstName: 'Julio',
+        lastName: 'Robinski',
+        email: 'jrobinski@gmail.com',
+        fullName: 'Julio Robinski'
+    },
+
+    //This is a test with empty fields. When an error occurs, it goes back to fix the mistake and continues through the test. QJH-124
+    test2: {
+        loan: 'Home Purchase',
+        propertyType: 'Single Family Home',
+        purchaseCityI: '',
+        purchaseCityV: 'sacramento, CA',
+        purchaseReason: 'Primary Home',
+        propertyLocated: 'Yes',
+        agent: 'Yes',
+        purchasePriceI: '',
+        purchasePriceV: '$175,000',
+        downPaymentI: '',
+        downPaymentV: '$10,000',
+        creditScore: 'Excellent',
+        creditHistory: 'Has not been in bankruptcy or foreclosure',
+        address1V: '421 E main st.',
+        address1I: '',
+        address2V: '',
+        address2I: '',
+        address3V: 'American Fork, UT 84003',
+        address3I: '',
+        firstNameV: 'Joseph',
+        firstNameI: '',
+        lastNameV: 'Hansen',
+        lastNameI: '',
+        emailV: 'jrobinski@gmail.com',
+        emailI: '',
+        fullName: 'Joseph Hansen'
+    },
+
+    //This is a test with minimum values. When an error occurs, it goes back to fix the mistake and continues through the test. QJH-125
+    test3: {
+        purchaseCityI: 'A, UT',
+        purchaseCityV: 'Lehi, UT',
+        purchasePriceI: '',
+        purchasePriceV: '$1',
+        downPaymentI: '',
+        downPaymentV: '$0',
+        address1V: '1 st.',
+        address1I: '',
+        address2V: '',
+        address2I: '',
+        address3V: 'American Fork, UT 84003',
+        address3I: 'A, UT 84003',
+        firstNameV: 'J',
+        firstNameI: '',
+        lastNameV: 'R',
+        lastNameI: '',
+        emailV: 'jrobinski@gmail.com',
+        emailI: ''
+    },
+
+    //This is a test with maximum values. When an error occurs, it goes back to fix the mistake and continues through the test. QJH-126
+    test4: {
+        purchaseCityI: 'My name is something crazy, UT',
+        purchaseCityV: 'sacramento, CA',
+        purchasePriceV: '1,000,000,1,000,000,1,000,000',
+        downPaymentI: '',
+        downPaymentV: '1,000,000,1,000,000,1,000,000',
+        address1V: '421 E main st.',
+        address1I: 'This is a test with maximum values. When an error.',
+        address2V: '',
+        address2I: '',
+        address3V: 'American Fork, UT 84003',
+        address3I: 'What do you think about to American Fork, UT 84003',
+        firstNameV: 'Julio is a good friend of mine',
+        firstNameI: '',
+        lastNameV: 'Julio is a good friend of mine',
+        lastNameI: '',
+        emailV: 'jrobinski@gmail.com',
+        emailI: 'isthisavalidemailaddresstouseforplace@theplace.com'
+    },
+
+    //This is a test with maximum values. When an error occurs, it goes back to fix the mistake and continues through the test. QJH-128
+    test5: {
+        purchaseCityI: 'My name is something crazies, UT',
+        purchaseCityV: 'sacramento, CA',
+        purchasePriceV: '1,000,000,1,000,000,1,000,000.00',
+        downPaymentI: '',
+        downPaymentV: '1,000,000,1,000,000,1,000,000.00',
+        address1V: '421 E main st.',
+        address1I: 'This is a test with maximum values. When an error..',
+        address2V: '',
+        address2I: '',
+        address3V: 'American Fork, UT 84003',
+        address3I: 'What do you think about to American Fork, UT 84003.',
+        firstNameV: 'Julio is a good friend of mine.',
+        firstNameI: '',
+        lastNameV: 'Julio is a good friend of mine.',
+        lastNameI: '',
+        emailV: 'jrobinski@gmail.com',
+        emailI: 'isthisavalidemailaddresstouseforplaces@theplace.com'
+    },
+
+     //This is a test that has a mix of valid information and invalid information. QJH-127
+     test6: {
+        purchaseCity: 'Lehi, UT',
+        purchasePriceV: '$300,000.00',
+        purchasePriceI: 'jsdhwo',
+        downPaymentV: '$20,000.00',
+        downPaymentI: 'skdo',
+        address1: '111 Walnut st.',
+        address2: '',
+        address3: 'Woodland, CA 95695',
+        firstName: 'Julio',
+        lastName: 'Robinski',
+        emailV: 'jrobinski@gmail.com',
+        emailI: 'jsldkf@sdlkfs.aaa'
+    },
+}
